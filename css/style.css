@@ -1,0 +1,57 @@
+/*!General Styles Start*/
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.75em;
+  color: rgb(30, 30, 30);
+  background: #0d121a;
+}
+/* Navbar Start */
+.navbar {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.navbar a {
+  color: #eee;
+  transition: 0.3s;
+  font-weight: 300;
+}
+.navbar a:hover {
+  color: rgb(208, 208, 208);
+}
+.navbar a:focus {
+  color: rgb(208, 208, 208);
+}
+/* Navbar End */
+/* Home Start */
+#home {
+  background-image: url(../images/Banner.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+.colorOverlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.searchInputBar {
+  height: 35%;
+}
+.searchInput input {
+  outline: none;
+  border: none;
+  padding-left: 2.5rem;
+}
+.day p span {
+  color: rgb(99, 99, 99);
+  font-weight: 100;
+}
+.todayTemp .temp {
+  font-size: 4.5rem;
+}
+.todayTemp {
+  transition: 0.3s;
+
+}
+.todayTemp:hover {
+  transform: scale(1.01);
+  outline: #0077ffb7 solid 3px ;
+}
+/* Home End */

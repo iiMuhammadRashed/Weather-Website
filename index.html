@@ -1,0 +1,185 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 10</title>
+    <link rel="icon" href="images/icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand w-25" href="#">
+          <img src="images/Logo.png" alt="Logo" width="15%" />
+          <span class="fw-bold">World Weather</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link fw-medium" href="" id="apiLink" target="_blank">Get API Link</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Home Start -->
+    <section id="home" class="vh-100">
+      <div class="colorOverlay w-100 h-100">
+        <div class="container">
+          <div
+            class="row justify-content-center align-items-center searchInputBar"
+          >
+            <div class="col-12">
+              <div class="searchInput d-flex position-relative w-75 mx-auto">
+                <input
+                  type="text"
+                  placeholder="Enter the City..."
+                  class="py-3 rounded-5 w-100"
+                  id="searchInputValue"
+                />
+                <button
+                  class="btn btn-secondary position-absolute end-0 top-50 translate-middle rounded-pill px-4"
+                  id="SearchBtn"
+                >
+                  Find
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="row allDays text-center g-4">
+            <div class="col-md-4">
+              <div class="todayTemp bg-body-tertiary rounded-2 h-100">
+                <div class="day d-flex align-items-center">
+                  <p
+                    class="d-flex justify-content-between px-3 w-100 h-100 border-bottom py-1"
+                  >
+                    <span id="currentDayName"></span>
+                    <span id="currentDayDate"></span>
+                  </p>
+                </div>
+                <div class="p-3">
+                  <h6 class="fw-bold fs-1 searchName d-inline-block"></h6>
+                  <h6 class="fw-bold countryName d-inline-block"></h6>
+                  <div class="row my-5 g-2">
+                    <div class="col-md-8">
+                      <div class="tempNumber">
+                        <div class="temp py-3 fw-bolder">
+                          <span id="currentTemp"></span>°C
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div id="currentDayImg">
+                        <img src="" alt="temp" class="img-fluid" />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="fw-light text-secondary"
+                    id="currentDayStatus"
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="todayTemp bg-body-tertiary rounded-2 h-100">
+                <div class="day d-flex align-items-center">
+                  <p
+                    class="d-flex justify-content-between px-3 w-100 h-100 border-bottom py-1"
+                  >
+                    <span id="nextDayName"></span>
+                    <span id="nextDayDate"></span>
+                  </p>
+                </div>
+                <div class="p-3">
+                  <div class="row my-5">
+                    <div class="col-md-8">
+                      <div class="tempNumber">
+                        <div class="temp py-3 fw-bolder">
+                          <span id="nextDayTemp"></span>°C
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div id="nextDayImg">
+                        <img src="" alt="temp" class="img-fluid" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fw-light text-secondary" id="nextDayStatus"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="todayTemp bg-body-tertiary rounded-2 h-100">
+                <div class="day d-flex align-items-center">
+                  <p
+                    class="d-flex justify-content-between px-3 w-100 h-100 border-bottom py-1"
+                  >
+                    <span id="afterNextDayName"></span>
+                    <span id="afterNextDayDate"></span>
+                  </p>
+                </div>
+                <div class="p-3">
+                  <div class="row my-5">
+                    <div class="col-md-8">
+                      <div class="tempNumber">
+                        <div class="temp py-3 fw-bolder">
+                          <span id="afterNextDayTemp"></span>°C
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div id="afterNextDayImg">
+                        <img src="" alt="temp" class="img-fluid" />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="fw-light text-secondary"
+                    id="afterNextDayStatus"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Home End -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
