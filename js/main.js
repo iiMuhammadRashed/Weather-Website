@@ -41,7 +41,7 @@ function getMonthName(monthIndex) {
 
 async function getCurrent(country) {
   apiData = await fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=ac6216a0e9514726934135943231802 &q=${country}&days=3&aqi=no&alerts=no`
+    `https://api.weatherapi.com/v1/forecast.json?key=7d77b96c972b4d119a3151101212704&q=${country}&days=3`
   );
   currentWeather = await apiData.json();
   document.getElementById("apiLink").setAttribute("href",`${apiData.url}`)
